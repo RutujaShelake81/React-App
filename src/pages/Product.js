@@ -15,12 +15,12 @@ function Product(props) {
     prescriptionRequired: "",
   });
 
-  const _getProductDetails = async () => {
-    const { data } = await axios.get(`${PRODUCTS_ENDPOINT}/${productId}`);
-    setProduct(data);
-    console.log(data);
-  };
   useEffect(() => {
+    const _getProductDetails = async () => {
+      const { data } = await axios.get(`${PRODUCTS_ENDPOINT}/${productId}`);
+      setProduct(data);
+      console.log(data);
+    };
     _getProductDetails();
   }, []);
 

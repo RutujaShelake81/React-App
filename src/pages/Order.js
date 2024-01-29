@@ -11,15 +11,15 @@ function Order(props) {
     orderDate: "",
     orderTime: "",
     amount: "",
-    orderStatus: ""
+    orderStatus: "",
   });
 
-  const _getOrderDetails = async () => {
-    const { data } = await axios.get(`${ORDERS_ENDPOINT}/${orderId}`);
-    setOrder(data);
-    console.log(data);
-  };
   useEffect(() => {
+    const _getOrderDetails = async () => {
+      const { data } = await axios.get(`${ORDERS_ENDPOINT}/${orderId}`);
+      setOrder(data);
+      console.log(data);
+    };
     _getOrderDetails();
   }, []);
 
@@ -38,7 +38,7 @@ function Order(props) {
             backgroundColor: "#666",
             color: "white",
             marginButton: "250px",
-            boxShadow: "5px 5px 20px  #666"
+            boxShadow: "5px 5px 20px  #666",
           }}
         >
           <tbody id="orders-table">
