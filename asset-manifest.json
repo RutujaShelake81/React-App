@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/kafene-react-app/static/css/main.e7ac0325.css",
-    "main.js": "/kafene-react-app/static/js/main.baebe609.js",
-    "static/js/787.3e2c7b12.chunk.js": "/kafene-react-app/static/js/787.3e2c7b12.chunk.js",
-    "index.html": "/kafene-react-app/index.html",
-    "main.e7ac0325.css.map": "/kafene-react-app/static/css/main.e7ac0325.css.map",
-    "main.baebe609.js.map": "/kafene-react-app/static/js/main.baebe609.js.map",
-    "787.3e2c7b12.chunk.js.map": "/kafene-react-app/static/js/787.3e2c7b12.chunk.js.map"
+    "main.css": "/React-App/static/css/main.e7ac0325.css",
+    "main.js": "/React-App/static/js/main.9395aee7.js",
+    "static/js/787.3e2c7b12.chunk.js": "/React-App/static/js/787.3e2c7b12.chunk.js",
+    "index.html": "/React-App/index.html",
+    "main.e7ac0325.css.map": "/React-App/static/css/main.e7ac0325.css.map",
+    "main.9395aee7.js.map": "/React-App/static/js/main.9395aee7.js.map",
+    "787.3e2c7b12.chunk.js.map": "/React-App/static/js/787.3e2c7b12.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e7ac0325.css",
-    "static/js/main.baebe609.js"
+    "static/js/main.9395aee7.js"
   ]
 }
