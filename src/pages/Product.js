@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import { PRODUCTS_ENDPOINT } from "../utils/APIEndpoints";
 import axios from "axios";
 
-function Product(props) {
-  const productId = props.match.params.productId;
-
+function Product() {
   const [product, setProduct] = useState({
     id: "",
     medicineName: "",

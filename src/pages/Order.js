@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ORDERS_ENDPOINT } from "../utils/APIEndpoints";
 import axios from "axios";
 
-function Order(props) {
-  const orderId = props.match.params.orderId;
-
+function Order() {
   const [order, setOrder] = useState({
     id: "",
     customerName: "",
