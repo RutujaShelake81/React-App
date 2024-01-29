@@ -17,7 +17,7 @@ function Product(props) {
 
   useEffect(() => {
     const _getProductDetails = async () => {
-      const { data } = await axios.get(`${PRODUCTS_ENDPOINT}/${productId}`);
+      const { data } = await axios.get(`${PRODUCTS_ENDPOINT}/`);
       setProduct(data);
       console.log(data);
     };

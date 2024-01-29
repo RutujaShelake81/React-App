@@ -16,7 +16,7 @@ function Order(props) {
 
   useEffect(() => {
     const _getOrderDetails = async () => {
-      const { data } = await axios.get(`${ORDERS_ENDPOINT}/${orderId}`);
+      const { data } = await axios.get(`${ORDERS_ENDPOINT}/`);
       setOrder(data);
       console.log(data);
     };
