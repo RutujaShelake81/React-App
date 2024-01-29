@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { HashRouter, Switch } from "react-router-dom";
 import LoggedInRedirect from "./components/Routes/LoggedInRedirect";
 import PrivateRoute from "./components/Routes/PrivateRoute";
 import Navbar from "./components/Navbar/Navbar";
@@ -11,7 +11,7 @@ import Product from "./pages/Product";
 import Users from "./pages/Users/Users";
 
 const App = () => (
-  <Router>
+  <HashRouter>
     <Navbar />
     <Switch>
       <LoggedInRedirect path="/" exact Component={Login} />
@@ -21,7 +21,7 @@ const App = () => (
       <PrivateRoute exact path="/product/:productId" Component={Product} />
       <PrivateRoute exact path="/users" Component={Users} />
     </Switch>
-  </Router>
+  </HashRouter>
 );
 
 export default App;
