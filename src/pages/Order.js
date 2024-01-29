@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { ORDERS_ENDPOINT } from "../utils/APIEndpoints";
 import axios from "axios";
 
-function Order() {
+function Order(props) {
+  const orderId = props.match.params.orderId;
+
   const [order, setOrder] = useState({
     id: "",
     customerName: "",
@@ -12,12 +14,12 @@ function Order() {
     orderStatus: "",
   });
 
+  const _getOrderDetails = async () => {
+    const { data } = await axios.get(`${ORDERS_ENDPOINT}/${orderId}`);
+    setOrder(data);
+    console.log(data);
+  };
   useEffect(() => {
-    const _getOrderDetails = async () => {
-      const { data } = await axios.get(`${ORDERS_ENDPOINT}/`);
-      setOrder(data);
-      console.log(data);
-    };
     _getOrderDetails();
   }, []);
 

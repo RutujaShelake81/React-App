@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { PRODUCTS_ENDPOINT } from "../utils/APIEndpoints";
 import axios from "axios";
 
-function Product() {
+function Product(props) {
+  const productId = props.match.params.productId;
+
   const [product, setProduct] = useState({
     id: "",
     medicineName: "",
@@ -13,12 +15,12 @@ function Product() {
     prescriptionRequired: "",
   });
 
+  const _getProductDetails = async () => {
+    const { data } = await axios.get(`${PRODUCTS_ENDPOINT}/${productId}`);
+    setProduct(data);
+    console.log(data);
+  };
   useEffect(() => {
-    const _getProductDetails = async () => {
-      const { data } = await axios.get(`${PRODUCTS_ENDPOINT}/`);
-      setProduct(data);
-      console.log(data);
-    };
     _getProductDetails();
   }, []);
 
