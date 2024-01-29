@@ -13,6 +13,7 @@ import Users from "./pages/Users/Users";
 const App = () => (
   <HashRouter>
     <Navbar />
+    <Link to={"/"}></Link>
     <Switch>
       <LoggedInRedirect path="/" exact Component={Login} />
       <PrivateRoute exact path="/orders" Component={Orders} />
